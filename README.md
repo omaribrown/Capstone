@@ -6,6 +6,49 @@ Aristotle's Closet is a local based clothing resale marketplace similar to Offer
 ## Wireframe 
 https://balsamiq.cloud/sof1t66/p3ai59r
 
+## Models
+
+### Tops
+Price
+
+Size
+- Small
+- Medium
+- Large
+
+Condition
+- New
+- Used
+- Damaged
+
+### Bottoms
+Price
+
+Size
+- Small
+- Medium
+- Large
+
+Condition
+- New
+- Used
+- Damaged
+
+
+### Shoes & Accessories
+Price
+
+Size
+- Small
+- Medium
+- Large
+
+Condition
+- New
+- Used
+- Damaged
+
+
 ## Built With
 - React
 - Java with Spring Boot
