@@ -4,6 +4,7 @@ package com.example.acspringappp.controller;
 import com.example.acspringappp.models.Tops;
 import com.example.acspringappp.service.TopsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -24,5 +25,8 @@ public class TopsController {
         return topsService.createTop(topsParam);
     }
 
-    
+    @DeleteMapping("/{itemId}")
+    public HttpStatus deleteTop(@PathVariable Long itemId) {
+        return topsService.deleteTop(itemId);
+    }
 }
