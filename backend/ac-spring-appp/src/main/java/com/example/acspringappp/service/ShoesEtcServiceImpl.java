@@ -5,7 +5,9 @@ import com.example.acspringappp.models.ShoesEtc;
 import com.example.acspringappp.repositories.ShoesEtcRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ShoesEtcServiceImpl implements ShoesEtcService {
     @Autowired
     private ShoesEtcRepository shoesEtcRepository;
