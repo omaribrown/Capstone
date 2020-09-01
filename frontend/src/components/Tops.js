@@ -13,9 +13,9 @@ export default class Tops extends Component {
     };
   }
 
-  deleteTop = async () => {
+  deleteTop = async (itemId) => {
       try {
-          const res = await axios.delete(`http://localhost:8080/tops/${}`)
+          const res = await axios.delete(`http://localhost:8080/tops/${itemId}`)
           const secondRes = await axios.get("http://localhost:8080/tops")
       } catch(e) {
           console.error(e, e.message)
@@ -53,11 +53,12 @@ export default class Tops extends Component {
             {this.state.tops.map((listings) => {
               return (
                 <tr>
+                  <td>{listings.id}</td>
                   <td>{listings.itemName}</td>
                   <td>{listings.price}</td>
                   <td>{listings.size}</td>
                   <td>{listings.condition}</td>
-                  <td><Button id={listings.id} variant='danger' onClick={this.deleteTop}>delete</Button><Button variant='primary'>edit</Button></td>
+                  <td><Button variant='danger' onClick={this.deleteTop(listings.id)}>delete</Button><Button variant='primary'>edit</Button></td>
                 </tr>
               );
             })}
