@@ -6,6 +6,8 @@ import Tops from './components/Tops'
 import Home from './components/Home'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
+import Bottoms from './components/Bottoms'
+import ShoesEtc from './components/ShoesEtc'
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,12 +15,16 @@ import {
   Link
 } from 'react-router-dom'
 
+// ANCHOR ADD MANAGE BUTTON THAT SHOWS EDIT/DELETE BUTTONS
+// ANCHOR THEN ADD SIGNED IN AS TO NAVBAR
+
+
 function App() {
   return (
     <Router>
       <div>
-        <Navbar bg='dark' variant='dark' fixed='top'>
-          <Navbar.Brand to='/'>Aristotle's Closet</Navbar.Brand>
+        <Navbar bg='dark' variant='dark' fixed='top`'>
+          <Navbar.Brand href='/'>Aristotle's Closet</Navbar.Brand>
           <Nav className='mr-auto'>
             <Nav.Link href='/'>Home</Nav.Link>
             <Nav.Link href='/list'>List Something</Nav.Link>
@@ -30,10 +36,10 @@ function App() {
 
         <Switch>
           <Route path='/shoesetc'>
-            <List />
+            <ShoesEtc />
           </Route>
           <Route path='/bottoms'>
-            <List />
+            <Bottoms />
           </Route>
           <Route path='/list'>
             <List />

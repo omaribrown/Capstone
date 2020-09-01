@@ -10,9 +10,9 @@ export default class Home extends Component {
                     <h1>Welcome to Aristotle's Closet</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus euismod varius enim a cursus. Suspendisse id urna laoreet mi rutrum tristique. Curabitur non congue lacus. Suspendisse at vestibulum risus. Maecenas in tincidunt justo.</p>
                     <p>
-                        <Button variant='primary'>Shop Tops</Button>
-                        <Button variant='primary'>Shop Bottoms</Button>
-                        <Button variant='primary'>Shop Shoes & Accessories</Button>
+                        <Button variant='primary' href='/tops'>Shop Tops</Button>
+                        <Button variant='primary' href='/tops'>Shop Bottoms</Button>
+                        <Button variant='primary' href='/tops'>Shop Shoes & Accessories</Button>
                     </p>
                 </Jumbotron>
             </div>
