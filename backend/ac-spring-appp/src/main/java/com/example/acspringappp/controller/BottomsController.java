@@ -1,6 +1,5 @@
 package com.example.acspringappp.controller;
 
-
 import com.example.acspringappp.models.Bottoms;
 import com.example.acspringappp.service.BottomsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +27,5 @@ public class BottomsController {
     public HttpStatus deleteBottom(@PathVariable Long itemId) {
         return bottomsService.deleteBottom(itemId);
     }
-
 
 }

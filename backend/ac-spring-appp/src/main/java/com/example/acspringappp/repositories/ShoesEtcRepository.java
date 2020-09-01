@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 public interface ShoesEtcRepository extends CrudRepository<ShoesEtc, Long> {
-    @Query("FROM shoes_etc s WHERE s.itemName = ?1")
+    @Query("FROM shoesetc s WHERE s.itemName = ?1")
     public ShoesEtc seeShoesEtc(String itemName);
 }

@@ -4,7 +4,7 @@ package com.example.acspringappp.models;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "shoes_etc")
+@Table(name = "shoesetc")
 public class ShoesEtc {
 
     @Id
