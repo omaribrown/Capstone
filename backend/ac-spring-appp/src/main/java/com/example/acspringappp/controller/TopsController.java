@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin
 @RequestMapping("/tops")
 public class TopsController {
-
     @Autowired
     TopsService topsService;
 
