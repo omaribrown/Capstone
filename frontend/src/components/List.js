@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import "../styles/list.css";
 // ANCHOR add a category option to effect post endpoint
+// ANCHOR ADD MOCAL TO SAY THANKS FOR LISTING AND ASK IF LIST SOMETHING ELSE IF NOT REROUTE TO LISTINGS
 export default class List extends Component {
   constructor() {
     super();
