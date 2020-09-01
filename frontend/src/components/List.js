@@ -3,7 +3,7 @@ import axios from "axios";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import "../styles/list.css";
-
+// ANCHOR add a category option to effect post endpoint
 export default class List extends Component {
   constructor() {
     super();
