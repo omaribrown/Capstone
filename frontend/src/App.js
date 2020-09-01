@@ -23,10 +23,18 @@ function App() {
             <Nav.Link href='/'>Home</Nav.Link>
             <Nav.Link href='/list'>List Something</Nav.Link>
             <Nav.Link href='/tops'>Tops</Nav.Link>
+            <Nav.Link href='/bottoms'>Bottoms</Nav.Link>
+            <Nav.Link href='/shoesetc'>Shoes & Accessories</Nav.Link>
           </Nav>
         </Navbar>
 
         <Switch>
+          <Route path='/shoesetc'>
+            <List />
+          </Route>
+          <Route path='/bottoms'>
+            <List />
+          </Route>
           <Route path='/list'>
             <List />
           </Route>

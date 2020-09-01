@@ -66,7 +66,9 @@ export default class List extends Component {
   }
   render() {
     return (
-      <div>
+      <div className='list-div'>
+
+        <h1>List an item</h1>
         <Form className="list-form">
           <Form.Group>
             <Form.Label>Item Name</Form.Label>

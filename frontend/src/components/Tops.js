@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import Table from 'react-bootstrap/Table'
-import axios from 'axios'
+import Table from "react-bootstrap/Table";
+import axios from "axios";
+import "../styles/tops.css";
 
 export default class Tops extends Component {
   constructor() {
@@ -27,9 +28,8 @@ export default class Tops extends Component {
 
   render() {
     return (
-      <div>
-          
-        <Table striped bordered hover>
+      <div className="tops-div">
+        <Table className="listings-table" striped bordered hover>
           <thead>
             <tr>
               <th>Item Name</th>
