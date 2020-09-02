@@ -14,18 +14,6 @@ export default class Tops extends Component {
     };
   }
 
-//   deleteTop = async (itemId) => {
-//       try {
-//         //   const res = await axios.delete(`http://localhost:8080/tops/${itemId}`)
-        
-//           const secondRes = await axios.get("http://localhost:8080/tops")
-//           this.setState({ deleteId: itemId })
-//           console.log(this.state.deleteId)
-//       } catch(e) {
-//           console.error(e, e.message)
-//       }
-//   }
-
   grabAllTops = async () => {
     try {
       const res = await axios.get("http://localhost:8080/tops");
@@ -35,6 +23,16 @@ export default class Tops extends Component {
       console.error(e, e.message);
     }
   };
+
+  deleteTop = async (id) => {
+      try {
+          const res = await axios.delete(`http://localhost:8080/tops/` + id)
+          const secondRes = await axios.get("http://localhost:8080/tops");
+        this.setState({ tops: res.data });
+      } catch(e) {
+          console.error(e, e.message)
+      }
+  }
 
   componentDidMount() {
     this.grabAllTops();
@@ -63,7 +61,7 @@ export default class Tops extends Component {
                   <td>{listings.price}</td>
                   <td>{listings.size}</td>
                   <td>{listings.condition}</td>
-                  <td><Button variant='danger'>delete</Button><Button variant='primary'>edit</Button></td>
+                  <td><Button variant='danger' onClick={ (e) => this.deleteTop(listings.id) }>delete</Button><Button variant='primary'>edit</Button></td>
                 </tr>
               );
             })}
