@@ -73,8 +73,8 @@ export default class Tops extends Component {
                   <td>{listings.id}</td>
                   <td>{listings.itemName}</td>
                   <td>{listings.price}</td>
-                  <td>{listings.size}</td>
-                  <td>{listings.condition}</td>
+                  <td>{listings.zipcode}</td>
+                  <td>{listings.description}</td>
                   <td><Button variant='danger' id={ listings.id } onClick={ (e) => this.deleteTop(e.target.id) }>delete</Button><Button variant='primary'>edit</Button></td>
                 </tr>
               );
