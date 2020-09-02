@@ -19,10 +19,10 @@ public class Tops {
     private String price;
 
     @Column
-    private String size;
+    private String zipcode;
 
     @Column
-    private String condition;
+    private String description;
 
     public Tops() {}
 
@@ -50,19 +50,19 @@ public class Tops {
         this.price = price;
     }
 
-    public String getSize() {
-        return size;
+    public String getZipcode() {
+        return zipcode;
     }
 
-    public void setSize(String size) {
-        this.size = size;
+    public void setZipcode(String zipcode) {
+        this.zipcode = zipcode;
     }
 
-    public String getCondition() {
-        return condition;
+    public String getDescription() {
+        return description;
     }
 
-    public void setCondition(String condition) {
-        this.condition = condition;
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
