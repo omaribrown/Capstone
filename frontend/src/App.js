@@ -32,6 +32,11 @@ function App() {
             <Nav.Link href='/bottoms'>Bottoms</Nav.Link>
             <Nav.Link href='/shoesetc'>Shoes & Accessories</Nav.Link>
           </Nav>
+          <Navbar.Collapse className='justify-content-end'>
+            <Navbar.Text>
+              Signed in as: <a href="#">Test User</a>
+            </Navbar.Text>
+          </Navbar.Collapse>
         </Navbar>
 
         <Switch>

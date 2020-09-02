@@ -33,8 +33,8 @@ export default class ShoesEtc extends Component {
                 <tr>
                   <th>Item Name</th>
                   <th>Price</th>
-                  <th>Description</th>
                   <th>Zipcode</th>
+                  <th>Description</th>
                 </tr>
               </thead>
               <tbody>
@@ -43,8 +43,8 @@ export default class ShoesEtc extends Component {
                     <tr>
                       <td>{listings.itemName}</td>
                       <td>{listings.price}</td>
-                      <td>{listings.size}</td>
-                      <td>{listings.condition}</td>
+                      <td>{listings.zipcode}</td>
+                      <td>{listings.description}</td>
                     </tr>
                   );
                 })}
