@@ -45,10 +45,12 @@ export default class List extends Component {
 
   handleSubmit = async (e) => {
     try {
+      console.log(this.state)
       const firstRes = await axios.post(
-        "http://localhost:8080/tops",
+        `http://localhost:8080/` + this.state.category,
         this.state
       );
+      console.log(this.state)
     } catch {
       console.error(e, e.message);
     }
@@ -86,9 +88,10 @@ export default class List extends Component {
               value={this.state.category}
               onChange={this.handleCategoryChange} as='select'>
                 <option></option>
-                <option>Tops</option>
-                <option>Bottoms</option>
-                <option>Shoes & Accessories</option>
+                <option value="tops">Tops</option>
+                <option value="bottoms">Bottoms</option>
+                {/* just use quotes for value */}
+                <option value="shoesetc">Shoes & Accessories</option>
               </Form.Control>
           </Form.Group>
           <Form.Group>
