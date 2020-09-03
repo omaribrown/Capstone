@@ -13,7 +13,7 @@ export default class Bottoms extends Component {
 
     grabAllBottoms = async () => {
         try {
-            const res = await axios.get("http://localhost:8080/tops")
+            const res = await axios.get("http://localhost:8080/bottoms")
             this.setState({ bottoms: res.data })
         } catch(e) {
             console.error(e, e.message);
