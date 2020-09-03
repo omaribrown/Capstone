@@ -3,6 +3,10 @@ import Table from "react-bootstrap/Table";
 import Button from 'react-bootstrap/Button'
 import axios from "axios";
 import "../styles/tops.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import trash from '../styles/assets/trash.png'
+import edit from '../styles/assets/edit.png'
 
 export default class Tops extends Component {
   constructor() {
@@ -68,7 +72,7 @@ export default class Tops extends Component {
                   <td>{listings.price}</td>
                   <td>{listings.zipcode}</td>
                   <td>{listings.description}</td>
-                  <td><Button variant='danger' id={ listings.id } onClick={ (e) => this.deleteTop(e.target.id) }>delete</Button><Button variant='primary'>edit</Button></td>
+                  <td><Button variant='danger' id={ listings.id } onClick={ (e) => this.deleteTop(e.target.id) }><img src={trash} alt='delete listing'/></Button><Button variant='primary'><img src={edit} alt='edit listing'/></Button></td>
                 </tr>
               );
             })}
