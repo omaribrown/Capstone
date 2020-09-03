@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Table from "react-bootstrap/Table";
 import axios from "axios";
+import Button from 'react-bootstrap/Button'
 
 export default class ShoesEtc extends Component {
     constructor() {
@@ -19,6 +20,18 @@ export default class ShoesEtc extends Component {
             console.error(e, e.message);
         }
     };
+
+    deleteShoesetc = (id) => {
+      axios.delete(`http://localhost:8080/shoesetc/` + id)
+      .then(res => {
+          if (res.data != null) {
+              this.setState({ 
+                  tops: this.state.shoesetc.filter( shoesetc => shoesetc.id !== id)
+            })
+            this.grabAllShoesEtc();
+          }
+      }) 
+  }
 
     componentDidMount() {
         this.grabAllShoesEtc();
@@ -45,6 +58,7 @@ export default class ShoesEtc extends Component {
                       <td>{listings.price}</td>
                       <td>{listings.zipcode}</td>
                       <td>{listings.description}</td>
+                      <td><Button variant='danger' id={ listings.id } onClick={ (e) => this.deleteShoesetc(e.target.id) }>delete</Button><Button variant='primary'>edit</Button></td>
                     </tr>
                   );
                 })}

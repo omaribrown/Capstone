@@ -18,7 +18,6 @@ export default class Tops extends Component {
     try {
       const res = await axios.get("http://localhost:8080/tops");
       this.setState({ tops: res.data });
-      console.log(res.data);
     } catch (e) {
       console.error(e, e.message);
     }
