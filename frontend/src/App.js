@@ -16,10 +16,7 @@ import {
 } from 'react-router-dom'
 import Footer from './components/Footer'
 import Share from './components/Share'
-
-// ANCHOR ADD MANAGE BUTTON THAT SHOWS EDIT/DELETE BUTTONS
-// ANCHOR THEN ADD SIGNED IN AS TO NAVBAR
-
+import { NavDropdown } from 'react-bootstrap';
 
 function App() {
   return (
@@ -28,13 +25,15 @@ function App() {
         <Navbar bg='dark' variant='dark' fixed='top`'>
           <Navbar.Brand href='/'>Aristotle's Closet</Navbar.Brand>
           <Nav className='mr-auto'>
-            <Nav.Link href='/'>Home</Nav.Link>
-            <Nav.Link href='/tops'>Tops</Nav.Link>
-            <Nav.Link href='/bottoms'>Bottoms</Nav.Link>
-            <Nav.Link href='/shoesetc'>Shoes & Accessories</Nav.Link>
+            <NavDropdown title='Shop' id='collapsible-nav-dropdown'>
+              {/* <NavDropdown.Item href='/'>Home</NavDropdown.Item> */}
+              <NavDropdown.Item href='/tops'>Tops</NavDropdown.Item>
+              <NavDropdown.Item href='/bottoms'>Bottoms</NavDropdown.Item>
+              <NavDropdown.Item href='/shoesetc'>Shoes & Accessories</NavDropdown.Item>
+            </NavDropdown>
           </Nav>
           <Nav className='justify-content-end'>
-            <Nav.Link href='/'>Manage Listings</Nav.Link>
+            {/* <Nav.Link href='/'>Manage Listings</Nav.Link> */}
             <Nav.Link href='/list'>List Something</Nav.Link>
             <Navbar.Text>
               Signed in as: <a href="#">Test User</a>

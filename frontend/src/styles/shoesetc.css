@@ -1,4 +1,4 @@
-.tops-div {
+.shoesetc-div {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -9,6 +9,7 @@
     margin-right: 5em;
     height: 80vh;
     margin-top: 0rem;
+    min-height: 300px;
 }
 
 .cards {
@@ -16,7 +17,7 @@
 
 
 }
-.tops {
+.shoesetc {
     background: #274156;
 }
 

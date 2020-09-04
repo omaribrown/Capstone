@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import Table from "react-bootstrap/Table";
 import axios from "axios";
 import Button from 'react-bootstrap/Button'
+import Card from 'react-bootstrap/Card'
+import '../styles/bottoms.css'
 
 export default class Bottoms extends Component {
     constructor() {
@@ -40,30 +42,32 @@ export default class Bottoms extends Component {
 
     render() {
         return (
-            <div className="bottoms-div">
-            <Table className="bottoms-listings" striped bordered hover>
-              <thead>
-                <tr>
-                  <th>Item Name</th>
-                  <th>Price</th>
-                  <th>Description</th>
-                  <th>Zipcode</th>
-                </tr>
-              </thead>
-              <tbody>
-                {this.state.bottoms.map((listings) => {
-                  return (
-                    <tr>
-                      <td>{listings.itemName}</td>
-                      <td>{listings.price}</td>
-                      <td>{listings.description}</td>
-                      <td>{listings.zipcode}</td>
-                      <td><Button variant='danger' id={ listings.id } onClick={ (e) => this.deleteBottom(e.target.id) }>delete</Button><Button variant='primary'>edit</Button></td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </Table>
+            <div className="bottoms">
+        <h1 className='header'>Bottoms</h1>
+        <div className='bottoms-div'>
+        {
+          this.state.bottoms.map((listings) => {
+            return (
+              <Card
+                bg="info"
+                text="white"
+                style={{ width: "18rem" }}
+                className="mb-2 cards"
+              >
+                <Card.Header>Bottoms</Card.Header>
+                <Card.Body>
+                  <Card.Title>{listings.itemName}</Card.Title>
+                  <Card.Text>Info: {listings.description}</Card.Text>
+                  <Card.Footer variant="info">
+                    <Card.Text><h4>${listings.price}</h4></Card.Text>
+                    <Card.Text>Zipcode: {listings.zipcode}</Card.Text>
+                  </Card.Footer>
+                </Card.Body>
+              </Card>
+            );
+          })
+        }
+        </div>
           </div>
         )
     }

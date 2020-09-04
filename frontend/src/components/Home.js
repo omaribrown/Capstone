@@ -10,7 +10,7 @@ import Shoesetc from './ShoesEtc'
 export default class Home extends Component {
     render() {
         return (
-            <div>
+            <div className='home-div'>
                 <Jumbotron className='jumbotron-div'>
                     <div className='hero-content'>
                     <h1>Welcome to Aristotle's Closet</h1>

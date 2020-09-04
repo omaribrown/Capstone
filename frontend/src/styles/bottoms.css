@@ -1,4 +1,4 @@
-.tops-div {
+.bottoms-div {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -11,12 +11,13 @@
     margin-top: 0rem;
 }
 
+
 .cards {
     margin-top: 2em;
 
 
 }
-.tops {
+.bottoms {
     background: #274156;
 }
 
