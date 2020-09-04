@@ -15,6 +15,7 @@ import {
   Link
 } from 'react-router-dom'
 import Footer from './components/Footer'
+import Share from './components/Share'
 
 // ANCHOR ADD MANAGE BUTTON THAT SHOWS EDIT/DELETE BUTTONS
 // ANCHOR THEN ADD SIGNED IN AS TO NAVBAR
@@ -28,17 +29,17 @@ function App() {
           <Navbar.Brand href='/'>Aristotle's Closet</Navbar.Brand>
           <Nav className='mr-auto'>
             <Nav.Link href='/'>Home</Nav.Link>
-            <Nav.Link href='/list'>List Something</Nav.Link>
             <Nav.Link href='/tops'>Tops</Nav.Link>
             <Nav.Link href='/bottoms'>Bottoms</Nav.Link>
             <Nav.Link href='/shoesetc'>Shoes & Accessories</Nav.Link>
           </Nav>
-          <Navbar.Collapse className='justify-content-end'>
-            {/* <Nav.Link href></Nav.Link> */}
+          <Nav className='justify-content-end'>
+            <Nav.Link href='/'>Manage Listings</Nav.Link>
+            <Nav.Link href='/list'>List Something</Nav.Link>
             <Navbar.Text>
               Signed in as: <a href="#">Test User</a>
             </Navbar.Text>
-          </Navbar.Collapse>
+          </Nav>
         </Navbar>
 
         <Switch>
@@ -59,9 +60,10 @@ function App() {
           </Route>
         </Switch>
       </div>
-    </Router>
-      // <Footer />
-       
+              {/* <Share /> */}
+
+      <Footer />
+    </Router>       
   );
 }
 

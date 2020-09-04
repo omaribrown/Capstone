@@ -1,18 +1,27 @@
 .tops-div {
-    min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
     align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
+    flex-wrap: wrap;
+    margin-left: 5em;
+    margin-right: 5em;
+    height: 80vh;
 }
 
-.listings-table {
-    width: 80%;
-    border: 2px solid black;
-    border-radius: 5px;
-    padding: 10px;
-    text-align: left;
-    margin-left: 20px;
-    margin-right: 20px;
+.cards {
+    margin-top: 2em;
+
+
+}
+.tops {
+    background: #274156;
+}
+
+.header {
+    padding: 60px;
+    text-align: center;
+    background: #E1B23F;
+    font-size: 30px;
 }

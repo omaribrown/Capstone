@@ -1,0 +1,20 @@
+.jumbotron-div {
+    background: url(./assets/hero.jpg);
+    height: 80vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0rem;
+}
+
+.hero-content {
+    max-width: 500px;
+    
+}
+
+.jumbotron {
+    margin-bottom: 0rem;
+}
