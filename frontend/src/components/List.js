@@ -60,7 +60,7 @@ export default class List extends Component {
     return (
       <div className='list-div'>
 
-        <h1>List an item</h1>
+        <h1 className='header'>List an item</h1>
         <Form className="list-form" bg='info'>
           <Form.Group>
             <Form.Label>Item Name</Form.Label>
@@ -113,7 +113,7 @@ export default class List extends Component {
             />
           </Form.Group>
 
-          <Button type="submit" onClick={this.handleSubmit} variant="primary">
+          <Button type="submit" onClick={this.handleSubmit} variant="warning">
             Submit
           </Button>
         </Form>
