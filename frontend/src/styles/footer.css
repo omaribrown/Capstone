@@ -5,4 +5,34 @@
     text-align: center;
     padding: 5px 5px;
     background: #605856;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.footer-links {
+    width: 50%;
+    padding: 1rem 3rem 1rem 3rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    text-align: left;
+}
+
+.footer-links ul {
+    list-style-type: none;
+
+}
+.newsletter {
+    width: 50%;
+    padding: 1rem 3rem 1rem 3rem;
+    text-align: center;
+}
+
+.email-input {
+    /* max-width: 300px; */
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
 }

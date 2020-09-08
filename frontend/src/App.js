@@ -22,7 +22,7 @@ function App() {
   return (
     <Router>
       <div>
-        <Navbar bg='dark' variant='dark' fixed='top`'>
+        <Navbar variant='dark' fixed='top`'>
           <Navbar.Brand href='/'>Aristotle's Closet</Navbar.Brand>
           <Nav className='mr-auto'>
             <NavDropdown title='Shop' id='collapsible-nav-dropdown'>

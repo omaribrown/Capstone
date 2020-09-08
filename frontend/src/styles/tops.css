@@ -7,14 +7,17 @@
     flex-wrap: wrap;
     margin-left: 5em;
     margin-right: 5em;
-    min-height: 80vh;
+    min-height: 40vh;
     margin-top: 0rem;
+}
+.tops {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .cards {
     margin-top: 2em;
-
-
 }
 .tops {
     background: #274156;
@@ -25,4 +28,14 @@
     text-align: center;
     background: #E1B23F;
     font-size: 30px;
+    width: 100vw;
+}
+
+.button-group {
+    padding-bottom: 3rem;
+}
+
+.button-group-items {
+    margin-left: 10px;
+    margin-right: 10px;
 }

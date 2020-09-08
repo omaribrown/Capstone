@@ -38,31 +38,13 @@ export default class Tops extends Component {
 
   createSampleTops = async () => {
       try {
-        const starterTops = await axios.post(  `http://localhost:8080/tops`, 
+        const starterTops = await axios.post(  `http://localhost:8080/tops`, [ 
                 {
-                    "itemName": "nike hoodie",
+                    "itemName": "Sample Item",
                     "price": "10",
-                    "zipcode": "medium",
-                    "description": "new"
-                },
-                {
-                    "itemName": "nike hoodie",
-                    "price": "10",
-                    "zipcode": "medium",
-                    "description": "new"
-                },
-                {
-                    "itemName": "nike hoodie",
-                    "price": "10",
-                    "zipcode": "medium",
-                    "description": "new"
-                },
-                {
-                    "itemName": "nike hoodie",
-                    "price": "10",
-                    "zipcode": "medium",
-                    "description": "new"
-                }
+                    "zipcode": "30303",
+                    "description": "New"
+                }]
         )
         const getTops = await axios.get(`http://localhost:8080/tops`)
       } catch(e) {
@@ -71,7 +53,7 @@ export default class Tops extends Component {
   }
 
   componentDidMount() {
-    this.createSampleTops();
+    // this.createSampleTops();
     this.grabAllTops();
   }
 
@@ -102,6 +84,11 @@ export default class Tops extends Component {
             );
           })
         }
+        
+        </div>
+        <div className='button-group'>
+        <Button className='button-group-items' variant='warning' onClick={this.createSampleItem}>Generate Sample Listing</Button>
+        <Button className='button-group-items' variant='warning' href='/list'>Create Your Own Listing</Button>
         </div>
       </div>
     );

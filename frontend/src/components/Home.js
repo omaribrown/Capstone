@@ -15,8 +15,11 @@ export default class Home extends Component {
                     <div className='hero-content'>
                     <h1>Welcome to Aristotle's Closet</h1>
                     <p>We are a local based online marketplace for buying and selling clothes. You can shop or sell on Aristotle's Closet!</p>
+                    
+                    <p>Here's how this mockup marketplace works: If you'd like to list something, just click the button that says "List something" in the top right corner. After you list something, you can hover over the "Shop" button and choose the corresponding category to see the item you listed! </p>
                     <p>
-                        <Button variant='info' href='/tops'>Shop New Tops!</Button>
+                        
+                        <Button variant='info' href='/tops'>Shop Tops!</Button>
                     </p>
                     </div>
                 </Jumbotron>
