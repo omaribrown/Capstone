@@ -1,0 +1,11 @@
+.manage-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    min-height: 70vh;
+}
+
+

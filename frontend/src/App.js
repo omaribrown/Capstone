@@ -17,6 +17,7 @@ import {
 import Footer from './components/Footer'
 import Share from './components/Share'
 import { NavDropdown } from 'react-bootstrap';
+import Manage from './components/Manage'
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           </Nav>
           <Nav className='justify-content-end'>
             <Nav.Link href='/list'>List Something</Nav.Link>
+            <Nav.Link href='/manage'>Manage Listings</Nav.Link>
             <Navbar.Text>
               Signed in as: <a href="#">Test User</a>
             </Navbar.Text>
@@ -48,6 +50,9 @@ function App() {
           </Route>
           <Route path='/list'>
             <List />
+          </Route>
+          <Route path='/manage'>
+            <Manage />
           </Route>
           <Route path='/tops'>
             <Tops />

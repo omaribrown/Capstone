@@ -36,17 +36,18 @@ export default class Tops extends Component {
     });
   };
 
-  createSampleTops = async () => {
+  createSampleTops = async (e) => {
       try {
-        const starterTops = await axios.post(  `http://localhost:8080/tops`, [ 
+        const starterTops = await axios.post(  `http://localhost:8080/tops`, 
                 {
                     "itemName": "Sample Item",
                     "price": "10",
                     "zipcode": "30303",
                     "description": "New"
-                }]
+                }
         )
-        const getTops = await axios.get(`http://localhost:8080/tops`)
+        // const getTops = await axios.get(`http://localhost:8080/tops`)
+        this.grabAllTops()
       } catch(e) {
           console.error(e, e.message)
       }
@@ -87,7 +88,7 @@ export default class Tops extends Component {
         
         </div>
         <div className='button-group'>
-        <Button className='button-group-items' variant='warning' onClick={this.createSampleItem}>Generate Sample Listing</Button>
+        <Button className='button-group-items' variant='warning' onClick={ (e) => this.createSampleTops()}>Generate Sample Listing</Button>
         <Button className='button-group-items' variant='warning' href='/list'>Create Your Own Listing</Button>
         </div>
       </div>
