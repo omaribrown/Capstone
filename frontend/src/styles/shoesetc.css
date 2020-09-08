@@ -3,13 +3,11 @@
     flex-direction: row;
     justify-content: space-evenly;
     text-align: center;
-    align-items: center;
     flex-wrap: wrap;
     margin-left: 5em;
     margin-right: 5em;
-    height: 80vh;
+    min-height: 50vh;
     margin-top: 0rem;
-    min-height: 300px;
 }
 
 .cards {
@@ -18,12 +16,16 @@
 
 }
 .shoesetc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: #274156;
 }
 
-.header {
+.page-header {
     padding: 60px;
     text-align: center;
     background: #E1B23F;
-    font-size: 30px;
+    /* font-size: 20px; */
+    width: 100vw;
 }

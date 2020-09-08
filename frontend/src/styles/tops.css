@@ -7,7 +7,7 @@
     flex-wrap: wrap;
     margin-left: 5em;
     margin-right: 5em;
-    min-height: 40vh;
+    min-height: 50vh;
     margin-top: 0rem;
 }
 .tops {
@@ -22,11 +22,11 @@
 }
 
 
-.header {
+.page-header {
     padding: 60px;
     text-align: center;
     background: #E1B23F;
-    font-size: 20px;
+    /* font-size: 20px; */
     width: 100vw;
 }
 

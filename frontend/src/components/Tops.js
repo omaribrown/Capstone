@@ -46,7 +46,6 @@ export default class Tops extends Component {
                     "description": "New"
                 }
         )
-        // const getTops = await axios.get(`http://localhost:8080/tops`)
         this.grabAllTops()
       } catch(e) {
           console.error(e, e.message)
@@ -61,7 +60,7 @@ export default class Tops extends Component {
   render() {
     return (
       <div className="tops">
-        <h1 className='header'>Tops</h1>
+        <h1 className='page-header'>Tops</h1>
         <div className='tops-div'>
         {
           this.state.tops.map((listings) => {

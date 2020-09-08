@@ -87,7 +87,7 @@ export default class Manage extends Component {
       <div className="manage-div">
         <div className="tops-table">
           <h1 className="table-header">Tops</h1>
-          <Table variant='dark' text="white" striped bordered hover>
+          <Table striped bordered hover>
             <thead>
               <tr>
                 <th>Item ID</th>

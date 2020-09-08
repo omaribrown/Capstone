@@ -34,6 +34,21 @@ export default class Bottoms extends Component {
             }
         }) 
     }
+    createSampleItem = async (e) => {
+      try {
+        const starterTops = await axios.post(  `http://localhost:8080/bottoms`, 
+                {
+                    "itemName": "Sample Item",
+                    "price": "10",
+                    "zipcode": "30303",
+                    "description": "New"
+                }
+        )
+        this.grabAllBottoms()
+      } catch(e) {
+          console.error(e, e.message)
+      }
+  }
 
     componentDidMount() {
         this.grabAllBottoms();
@@ -43,7 +58,7 @@ export default class Bottoms extends Component {
     render() {
         return (
             <div className="bottoms">
-        <h1 className='header'>Bottoms</h1>
+        <h1 className='page-header'>Bottoms</h1>
         <div className='bottoms-div'>
         {
           this.state.bottoms.map((listings) => {
@@ -67,6 +82,10 @@ export default class Bottoms extends Component {
             );
           })
         }
+        </div>
+        <div className='button-group'>
+        <Button className='button-group-items' variant='warning' onClick={ (e) => this.createSampleItem()}>Generate Sample Listing</Button>
+        <Button className='button-group-items' variant='warning' href='/list'>Create Your Own Listing</Button>
         </div>
           </div>
         )

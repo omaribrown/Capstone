@@ -22,6 +22,21 @@ export default class ShoesEtc extends Component {
             console.error(e, e.message);
         }
     };
+    createSampleItem = async (e) => {
+      try {
+        const starterTops = await axios.post(  `http://localhost:8080/shoesetc`, 
+                {
+                    "itemName": "Sample Item",
+                    "price": "10",
+                    "zipcode": "30303",
+                    "description": "New"
+                }
+        )
+        this.grabAllShoesEtc()
+      } catch(e) {
+          console.error(e, e.message)
+      }
+  }
 
     deleteShoesetc = (id) => {
       axios.delete(`http://localhost:8080/shoesetc/` + id)
@@ -43,7 +58,7 @@ export default class ShoesEtc extends Component {
     render() {
         return (
             <div className="shoesetc">
-        <h1 className='header'>Shoes & Accessories</h1>
+        <h1 className='page-header'>Shoes & Accessories</h1>
         <div className='shoesetc-div'>
         {
           this.state.shoesEtc.map((listings) => {
@@ -67,6 +82,10 @@ export default class ShoesEtc extends Component {
             );
           })
         }
+        </div>
+        <div className='button-group'>
+        <Button className='button-group-items' variant='warning' onClick={ (e) => this.createSampleItem()}>Generate Sample Listing</Button>
+        <Button className='button-group-items' variant='warning' href='/list'>Create Your Own Listing</Button>
         </div>
           </div>
         )
