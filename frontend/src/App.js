@@ -26,14 +26,12 @@ function App() {
           <Navbar.Brand href='/'>Aristotle's Closet</Navbar.Brand>
           <Nav className='mr-auto'>
             <NavDropdown title='Shop' id='collapsible-nav-dropdown'>
-              {/* <NavDropdown.Item href='/'>Home</NavDropdown.Item> */}
               <NavDropdown.Item href='/tops'>Tops</NavDropdown.Item>
               <NavDropdown.Item href='/bottoms'>Bottoms</NavDropdown.Item>
               <NavDropdown.Item href='/shoesetc'>Shoes & Accessories</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Nav className='justify-content-end'>
-            {/* <Nav.Link href='/'>Manage Listings</Nav.Link> */}
             <Nav.Link href='/list'>List Something</Nav.Link>
             <Navbar.Text>
               Signed in as: <a href="#">Test User</a>

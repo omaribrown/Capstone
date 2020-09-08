@@ -36,7 +36,42 @@ export default class Tops extends Component {
     });
   };
 
+  createSampleTops = async () => {
+      try {
+        const starterTops = await axios.post(  `http://localhost:8080/tops`, 
+                {
+                    "itemName": "nike hoodie",
+                    "price": "10",
+                    "zipcode": "medium",
+                    "description": "new"
+                },
+                {
+                    "itemName": "nike hoodie",
+                    "price": "10",
+                    "zipcode": "medium",
+                    "description": "new"
+                },
+                {
+                    "itemName": "nike hoodie",
+                    "price": "10",
+                    "zipcode": "medium",
+                    "description": "new"
+                },
+                {
+                    "itemName": "nike hoodie",
+                    "price": "10",
+                    "zipcode": "medium",
+                    "description": "new"
+                }
+        )
+        const getTops = await axios.get(`http://localhost:8080/tops`)
+      } catch(e) {
+          console.error(e, e.message)
+      }
+  }
+
   componentDidMount() {
+    this.createSampleTops();
     this.grabAllTops();
   }
 

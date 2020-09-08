@@ -7,7 +7,7 @@
     flex-wrap: wrap;
     margin-left: 5em;
     margin-right: 5em;
-    height: 80vh;
+    min-height: 80vh;
     margin-top: 0rem;
 }
 
