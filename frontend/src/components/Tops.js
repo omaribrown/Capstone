@@ -18,7 +18,7 @@ export default class Tops extends Component {
 
   grabAllTops = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/tops");
+      const res = await axios.get("https://aristotles-closet.herokuapp.com/tops");
       this.setState({ tops: res.data });
     } catch (e) {
       console.error(e, e.message);
@@ -38,7 +38,7 @@ export default class Tops extends Component {
 
   createSampleTops = async (e) => {
       try {
-        const starterTops = await axios.post(  `http://localhost:8080/tops`, 
+        const starterTops = await axios.post(  `http://near-roll.surge.sh/tops`, 
                 {
                     "itemName": "Sample Item",
                     "price": "10",
