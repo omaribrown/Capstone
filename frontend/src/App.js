@@ -33,7 +33,7 @@ function App() {
             </NavDropdown>
           </Nav>
           <Nav className='justify-content-end'>
-            <Nav.Link href='/list'>List Something</Nav.Link>
+            <Nav.Link href='https://aristotles-closet.surge.sh/list'>List Something</Nav.Link>
             <Nav.Link href='/manage'>Manage Listings</Nav.Link>
             <Navbar.Text>
               Signed in as: <a href="#">Test User</a>
